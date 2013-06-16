@@ -1,0 +1,35 @@
+# Object files
+*.o
+*.sys
+
+# Libraries
+*.lib
+*.a
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.bin
+*.sys
+
+# Images
+*.img
+
+# Logging files
+*.log
+
+# Cscope and ctags
+*.out
+*.files
+tags
+index.sh
+
+*.swp
+

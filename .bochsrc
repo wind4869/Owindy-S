@@ -1,0 +1,42 @@
+################################
+# Configuration file for Bochs #
+################################
+
+# CPU
+cpu: count=1, ips=1000000
+
+# memory
+megs: 128
+
+romimage: file=$BXSHARE/BIOS-bochs-latest
+vgaromimage: file=$BXSHARE/VGABIOS-lgpl-latest
+
+# floppy (deprecated, but useful now)
+floppya: 1_44=a.img, status=inserted
+
+# harddisk or cdrom
+#ata0: enabled=1, ioaddr1=0x1f0, ioaddr2=0x3f0, irq=14
+#ata0-master: type=disk, path="c.img", mode=flat, cylinders=65, heads=16, spt=63
+
+# boot image
+boot: floppy
+#boot: disk
+
+# log file
+log: .log
+debugger_log: .debugger.log
+
+# usb, mouse, keyboard setting
+#usb_uhci: enabled=1, port1=mouse
+#mouse: enabled=1, toggle=ctrl+alt
+keyboard: keymap=$BXSHARE/keymaps/x11-pc-us.map
+#keyboard: keymap=$BXSHARE/keymaps/sdl-pc-us.map
+
+# interface setting
+config_interface: textconfig
+
+# display setting
+display_library: x, options="gui_debug"
+
+# use 'xchg bx, bx' to break as debugging breatpoint
+magic_break: enabled=1
